@@ -231,10 +231,8 @@ def high_score():
             turtle.onkey(high_reset, 'r')
 
     except FileNotFoundError:
-        print("FileNotFoundError: [Errno 2] No such file or directory: 'high_score.txt'\
-        	\nSolution:   Please create a text file with name \"high_score.txt\" in same directory as this python file \
-        	\n            Open the txt file in any text editor and write 0 (without any space) and save it and then run the program again.\n")
-        exit()
+    	with open("high_score.txt",'w') as f:
+    		f.write('0')
 
 
 # To reset the high score
