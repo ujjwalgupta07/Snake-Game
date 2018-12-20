@@ -214,7 +214,7 @@ def game_over():
 # Function to write the high score on the screen and save it in the file high_score.txt
 def high_score():
     try:
-        with open("high_score.txt", "r+") as f:
+        with open(".high_score.txt", "r+") as f:
             data = int(f.read())
             if data < score[0]:
                 data = score[0]
@@ -231,15 +231,15 @@ def high_score():
             turtle.onkey(high_reset, 'r')
 
     except FileNotFoundError:
-    	with open("high_score.txt",'w') as f:
-    		f.write('0')
+    	with open(".high_score.txt",'w') as f:
+    		f.write(str(score[0]))
 
 
 # To reset the high score
 def high_reset():
 	turtle.onkey(None, 'r')
 	data = 0
-	with open("high_score.txt", "r+") as f:
+	with open(".high_score.txt", "r+") as f:
 	    f.seek(0)
 	    f.write(str(data))
 	    f.truncate()
