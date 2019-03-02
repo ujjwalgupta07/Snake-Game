@@ -2,7 +2,7 @@
 ##                                                            ##
 ##                  Ujjwal Gupta                              ##
 ##                   Snake Game                               ##
-##          https://github.com/theunknownguy                  ##
+##          https://github.com/ujjwalgupta07                  ##
 ##                                                            ##
 ##============================================================##
 
